@@ -13,6 +13,6 @@
   },
   "externals": {},
   "localizedResources": {
-    "MyWebPartStrings": "lib/loc/{locale}.js"
+    "MyWebPartStrings": "./lib/loc/{locale}.js"
   }
 }

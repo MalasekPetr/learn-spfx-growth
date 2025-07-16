@@ -5,7 +5,6 @@ import { My } from '../../components';
 import { MyProps } from '../../models';
 
 export interface IMyWebPartProps {
-  description: string;
 }
 
 export default class MyWebPart extends BaseClientSideWebPart<IMyWebPartProps> {

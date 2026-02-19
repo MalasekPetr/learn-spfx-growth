@@ -1,0 +1,28 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at http://aka.ms/fabric-assets-license
+*/
+.app {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+}
+.app.teams {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+}
+.app.dark {
+  color: "[theme:bodyText, default: #ffffff]";
+  color: var(--bodyText);
+}
+
+.folderName {
+  font-weight: 600;
+  cursor: pointer;
+  color: "[theme:link, default: #0078d4]";
+  color: var(--link);
+}
+.folderName:hover {
+  color: "[theme:linkHovered, default: #004578]";
+  color: var(--linkHovered);
+  text-decoration: underline;
+}

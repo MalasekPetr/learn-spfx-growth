@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "seedling-client-side-solution",
+    "title": "Seedling",
+    "id": "b73a341e-d9a9-4d0f-acf3-8447293df478",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "iconPath": "assets/malachis.png",
+    "supportedLocales": [
+      "en-us",
+      "cs-cz"
+    ],
+    "developer": {
+      "name": "Petr Malášek",
+      "websiteUrl": "https://www.malachis.eu/",
+      "privacyUrl": "https://www.malachis.eu/spfx-privacy-policy/",
+      "termsOfUseUrl": "https://www.malachis.eu/spfx-terms-of-use/",
+      "mpnId": "5305658"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Malach IS - Seedling: OneDrive File Explorer"
+      },
+      "longDescription": {
+        "default": "Malach IS - Seedling: Browse your OneDrive files and folders using Microsoft Graph API"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity", "Collaboration"]
+    },
+    "features": [
+      {
+        "title": "Seedling Feature",
+        "description": "The feature that activates elements of the Seedling solution.",
+        "id": "6c9b450d-f4fa-4983-be5e-acccc0fa2dd4",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Files.Read"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/seedling.sppkg"
+  }
+}

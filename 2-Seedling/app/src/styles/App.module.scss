@@ -1,0 +1,30 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.app {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+
+  &.dark {
+    color: "[theme:bodyText, default: #ffffff]";
+    color: var(--bodyText);
+  }
+}
+
+.folderName {
+  font-weight: 600;
+  cursor: pointer;
+  color: "[theme:link, default: #0078d4]";
+  color: var(--link);
+
+  &:hover {
+    color: "[theme:linkHovered, default: #004578]";
+    color: var(--linkHovered);
+    text-decoration: underline;
+  }
+}

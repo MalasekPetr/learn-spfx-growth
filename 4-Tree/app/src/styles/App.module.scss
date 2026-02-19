@@ -1,0 +1,70 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.app {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+
+  &.dark {
+    color: "[theme:bodyText, default: #ffffff]";
+    color: var(--bodyText);
+  }
+}
+
+.searchBox {
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusNew {
+  background-color: #deecf9;
+  color: #004578;
+}
+
+.statusInProgress {
+  background-color: #fff4ce;
+  color: #835c00;
+}
+
+.statusResolved {
+  background-color: #dff6dd;
+  color: #107c10;
+}
+
+.statusClosed {
+  background-color: #edebe9;
+  color: #605e5c;
+}
+
+.priorityLow {
+  background-color: #dff6dd;
+  color: #107c10;
+}
+
+.priorityMedium {
+  background-color: #fff4ce;
+  color: #835c00;
+}
+
+.priorityHigh {
+  background-color: #fed9cc;
+  color: #d83b01;
+}
+
+.priorityCritical {
+  background-color: #fde7e9;
+  color: #a4262c;
+}

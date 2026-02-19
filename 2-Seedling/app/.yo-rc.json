@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.0",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "seedling",
+    "libraryId": "b73a341e-d9a9-4d0f-acf3-8447293df478",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Seedling",
+    "solutionShortDescription": "Seedling - OneDrive File Explorer",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

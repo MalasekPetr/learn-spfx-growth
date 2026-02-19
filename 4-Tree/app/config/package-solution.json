@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "tree-client-side-solution",
+    "title": "Tree",
+    "id": "704467b7-a0d4-488c-aa87-72da8ad2bdf3",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "iconPath": "assets/malachis.png",
+    "supportedLocales": [
+      "en-us",
+      "cs-cz"
+    ],
+    "developer": {
+      "name": "Petr Malášek",
+      "websiteUrl": "https://www.malachis.eu/",
+      "privacyUrl": "https://www.malachis.eu/spfx-privacy-policy/",
+      "termsOfUseUrl": "https://www.malachis.eu/spfx-terms-of-use/",
+      "mpnId": "5305658"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Malach IS - Tree: Helpdesk Tickets"
+      },
+      "longDescription": {
+        "default": "Malach IS - Tree: Manage helpdesk tickets with full CRUD, caching, and a rich data grid"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity", "Collaboration"]
+    },
+    "features": [
+      {
+        "title": "Tree Feature",
+        "description": "The feature that activates elements of the Tree solution.",
+        "id": "7ce521c1-4fb4-43a3-8646-8cc804b60e95",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/tree.sppkg"
+  }
+}

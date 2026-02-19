@@ -1,0 +1,1 @@
+{"version":3,"file":"MyWebPartProps.js","sourceRoot":"","sources":["../../src/models/MyWebPartProps.ts"],"names":[],"mappings":"","sourcesContent":["export type MyWebPartProps = {\r\n  description: string;\r\n  showDepartment: boolean;\r\n  showJobTitle: boolean;\r\n  showEmail: boolean;\r\n  showMobilePhone: boolean;\r\n  showBusinessPhone: boolean;\r\n}\r\n"]}

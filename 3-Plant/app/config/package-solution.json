@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "plant-client-side-solution",
+    "title": "Plant",
+    "id": "385e5978-8ce7-4f9a-a4d3-01aee1bb1731",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "iconPath": "assets/malachis.png",
+    "supportedLocales": [
+      "en-us",
+      "cs-cz"
+    ],
+    "developer": {
+      "name": "Petr Malášek",
+      "websiteUrl": "https://www.malachis.eu/",
+      "privacyUrl": "https://www.malachis.eu/spfx-privacy-policy/",
+      "termsOfUseUrl": "https://www.malachis.eu/spfx-terms-of-use/",
+      "mpnId": "5305658"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Malach IS - Plant: Phone List"
+      },
+      "longDescription": {
+        "default": "Malach IS - Plant: Browse your organization's user directory with search and configurable columns"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity", "Collaboration"]
+    },
+    "features": [
+      {
+        "title": "Plant Feature",
+        "description": "The feature that activates elements of the Plant solution.",
+        "id": "f790cef1-6b64-46fb-8423-8b39ebede92f",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read.All"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/plant.sppkg"
+  }
+}

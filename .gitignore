@@ -1,0 +1,26 @@
+# Dependency directories
+**/node_modules
+
+# Build generated files
+**/dist
+**/lib
+**/release
+**/solution
+**/temp
+**/*.sppkg
+**/.heft
+
+# Logs
+**/*.log
+
+# Coverage
+**/coverage
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Visual Studio
+**/.vs
+**/bin
+**/obj

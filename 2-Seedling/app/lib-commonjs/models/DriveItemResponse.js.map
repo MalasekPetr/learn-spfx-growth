@@ -1,0 +1,1 @@
+{"version":3,"file":"DriveItemResponse.js","sourceRoot":"","sources":["../../src/models/DriveItemResponse.ts"],"names":[],"mappings":"","sourcesContent":["import type { DriveItem } from './DriveItem';\r\n\r\nexport type DriveItemResponse = {\r\n  value: DriveItem[];\r\n}\r\n"]}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "seed-client-side-solution",
+    "title": "Seed",
+    "id": "5f75395d-5839-439d-b589-62a2ba65e679",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "iconPath": "assets/malachis.png",
+    "supportedLocales": [
+      "en-us",
+      "cs-cz"
+    ],
+    "developer": {
+      "name": "Petr Malášek",
+      "websiteUrl": "https://www.malachis.eu/",
+      "privacyUrl": "https://www.malachis.eu/spfx-privacy-policy/",
+      "termsOfUseUrl": "https://www.malachis.eu/spfx-terms-of-use/",
+      "mpnId": "5305658"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Malach IS - Seed project description"
+      },
+      "longDescription": {
+        "default": "Malach IS - Seed project description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity", "Collaboration"]
+    },
+    "features": [
+      {
+        "title": "Seed Feature",
+        "description": "The feature that activates elements of the Seed solution.",
+        "id": "8b093459-b349-4ab7-96c2-bdef41e6ec0a",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/seed.sppkg"
+  }
+}

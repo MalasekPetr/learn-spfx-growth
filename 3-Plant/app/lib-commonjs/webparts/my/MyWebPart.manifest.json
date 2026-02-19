@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "558abb3a-15ac-43e6-97c2-c3b50dc57772",
+  "alias": "MyWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsTab"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Advanced" },
+    "title": { "default": "Phone List" },
+    "description": { "default": "Browse your organization's user directory" },
+    "officeFabricIconFontName": "ContactList",
+    "properties": {
+      "description": "Phone List",
+      "showDepartment": true,
+      "showJobTitle": true,
+      "showEmail": true,
+      "showMobilePhone": true,
+      "showBusinessPhone": true
+    }
+  }]
+}

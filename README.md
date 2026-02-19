@@ -1,20 +1,46 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# SPFx Learning Ladder
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+A 4-step progressive learning path for SharePoint Framework (SPFx) developers. Each stage builds on the previous one, introducing new concepts while maintaining a consistent, durable project structure.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+![SPFx Learning Ladder](growth.png)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Stages
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+| Stage | Folder | Description |
+|-------|--------|-------------|
+| 1 | [1-Seed](1-Seed/) | Project structure, barrel exports, component basics, localization, theming |
+| 2 | [2-Seedling](2-Seedling/) | Graph API, OneDrive browsing, React hooks, Fluent UI components |
+| 3 | [3-Plant](3-Plant/) | Graph pagination, user directory, debounced search, utility functions, property pane toggles |
+| 4 | [4-Tree](4-Tree/) | PnP/JS CRUD, IndexedDB caching (Dexie), Kendo React Grid, service/cache layers |
+
+## How to Use
+
+1. Start with **1-Seed** -- understand the project structure and design patterns
+2. Move to **2-Seedling** -- compare it with 1-Seed to see what changed and why
+3. Continue through **3-Plant** and **4-Tree**, each time diffing against the previous stage
+
+## Getting Started
+
+Each stage is a standalone SPFx project. To run any stage:
+
+```bash
+cd <Stage>/app
+npm install
+npm start
+```
+
+## Comparing Stages
+
+To see what changed between stages, diff the folders:
+
+```bash
+diff -r 1-Seed/app/src 2-Seedling/app/src
+```
+
+## Tech Stack
+
+- SharePoint Framework 1.22.2
+- React 17
+- TypeScript 5.8
+- Fluent UI React 8
+- Heft build system

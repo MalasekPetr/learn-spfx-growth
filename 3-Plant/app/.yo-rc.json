@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.0",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "plant",
+    "libraryId": "385e5978-8ce7-4f9a-a4d3-01aee1bb1731",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Plant",
+    "solutionShortDescription": "Plant - Phone List",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

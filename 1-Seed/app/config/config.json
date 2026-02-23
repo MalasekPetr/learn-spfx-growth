@@ -13,6 +13,10 @@
   },
   "externals": {},
   "localizedResources": {
+<<<<<<< HEAD:1-Seed/app/config/config.json
     "Localization": "lib/loc/{locale}.js"
+=======
+    "MyWebPartStrings": "./lib/loc/{locale}.js"
+>>>>>>> 07b5ff223c222af6ca796d2c3c11b7c39c12ac63:app/config/config.json
   }
 }

@@ -29,14 +29,6 @@ npm install
 npm start
 ```
 
-## Comparing Stages
-
-To see what changed between stages, diff the folders:
-
-```bash
-diff -r 1-Seed/app/src 2-Seedling/app/src
-```
-
 ## Tech Stack
 
 - SharePoint Framework 1.22.2

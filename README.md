@@ -8,7 +8,7 @@ A 4-step progressive learning path for SharePoint Framework (SPFx) developers. E
 
 | Stage | Folder | Description |
 |-------|--------|-------------|
-| 1 | [1-Seed](1-Seed/) | Project structure, barrel exports, component basics, localization, theming |
+| 1 | [1-Seed](1-Seed/) | Project structure, barrel exports, React component basics, localization, theming |
 | 2 | [2-Seedling](2-Seedling/) | Graph API, OneDrive browsing, React hooks, Fluent UI components |
 | 3 | [3-Plant](3-Plant/) | Graph pagination, user directory, debounced search, utility functions, property pane toggles |
 | 4 | [4-Tree](4-Tree/) | PnP/JS CRUD, IndexedDB caching (Dexie), Kendo React Grid, service/cache layers |

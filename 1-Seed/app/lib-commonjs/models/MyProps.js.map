@@ -1,0 +1,1 @@
+{"version":3,"file":"MyProps.js","sourceRoot":"","sources":["../../src/models/MyProps.ts"],"names":[],"mappings":"","sourcesContent":["export type MyProps = {\r\n  description: string;\r\n  isDarkTheme: boolean;\r\n  hasTeamsContext: boolean;\r\n  userDisplayName: string;\r\n  environmentMessage: string;\r\n}\r\n"]}

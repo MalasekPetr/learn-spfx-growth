@@ -1,34 +1,31 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-<<<<<<< HEAD:1-Seed/app/src/webparts/my/MyWebPart.ts
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'Localization';
-=======
->>>>>>> 07b5ff223c222af6ca796d2c3c11b7c39c12ac63:app/src/webparts/my/MyWebPart.ts
 import { My } from '../../components';
 import { MyProps, MyWebPartProps } from '../../models';
 
-<<<<<<< HEAD:1-Seed/app/src/webparts/my/MyWebPart.ts
 export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
-=======
-export interface IMyWebPartProps {
-}
 
-export default class MyWebPart extends BaseClientSideWebPart<IMyWebPartProps> {
->>>>>>> 07b5ff223c222af6ca796d2c3c11b7c39c12ac63:app/src/webparts/my/MyWebPart.ts
+  private _isDarkTheme: boolean = false;
+  private _environmentMessage: string = '';
 
   public render(): void {
     const element: React.ReactElement<MyProps> = React.createElement(
       My,
       {
+        description: this.properties.description,
+        isDarkTheme: this._isDarkTheme,
+        hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userDisplayName: this.context.pageContext.user.displayName,
+        environmentMessage: this._environmentMessage,
       }
     );
     ReactDom.render(element, this.domElement);
   }
 
-<<<<<<< HEAD:1-Seed/app/src/webparts/my/MyWebPart.ts
   protected onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
       this._environmentMessage = message;
@@ -79,8 +76,6 @@ export default class MyWebPart extends BaseClientSideWebPart<IMyWebPartProps> {
     }
   }
 
-=======
->>>>>>> 07b5ff223c222af6ca796d2c3c11b7c39c12ac63:app/src/webparts/my/MyWebPart.ts
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }

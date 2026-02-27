@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/models/index.ts"],"names":[],"mappings":"","sourcesContent":["export type { MyProps } from './MyProps';\r\nexport type { MyWebPartProps } from './MyWebPartProps';\r\nexport type { DriveItem } from './DriveItem';\r\nexport type { DriveItemResponse } from './DriveItemResponse';\r\n"]}

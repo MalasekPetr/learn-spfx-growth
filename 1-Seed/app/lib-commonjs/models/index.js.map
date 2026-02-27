@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/models/index.ts"],"names":[],"mappings":"","sourcesContent":["export type { AppProps } from './AppProps';\r\nexport type { BaseWebPartProps } from './BaseWebPartProps';\r\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"file":"MyProps.js","sourceRoot":"","sources":["../../src/models/MyProps.ts"],"names":[],"mappings":"","sourcesContent":["import type { MSGraphClientV3 } from '@microsoft/sp-http';\r\n\r\nexport type MyProps = {\r\n  graphClient: MSGraphClientV3;\r\n  isDarkTheme: boolean;\r\n  hasTeamsContext: boolean;\r\n}\r\n"]}

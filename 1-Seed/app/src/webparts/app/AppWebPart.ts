@@ -4,21 +4,20 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'Localization';
-import { My } from '../../components';
-import { MyProps, MyWebPartProps } from '../../models';
+import { App } from '../../components';
+import { AppProps, BaseWebPartProps } from '../../models';
 
-export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
+export default class MyWebPart extends BaseClientSideWebPart<BaseWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<MyProps> = React.createElement(
-      My,
+    const element: React.ReactElement<AppProps> = React.createElement(
+      App,
       {
-        description: this.properties.description,
+        webPartProps: this.properties,
         isDarkTheme: this._isDarkTheme,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
         environmentMessage: this._environmentMessage,
       }

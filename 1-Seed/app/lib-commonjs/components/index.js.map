@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/components/index.ts"],"names":[],"mappings":";;;AAAA,2BAA0B;AAAjB,wFAAA,EAAE,OAAA","sourcesContent":["export { My } from './My';\r\n"]}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/components/index.ts"],"names":[],"mappings":";;;AAAA,6BAA4B;AAAnB,0FAAA,GAAG,OAAA","sourcesContent":["export { App } from './App';\r\n"]}

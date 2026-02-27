@@ -1,21 +1,22 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "e90d4de1-5703-44dd-bec4-c52902299f4e",
-  "alias": "MyWebPart",
+  "alias": "AppWebPart",
   "componentType": "WebPart",
   "version": "*",
   "manifestVersion": 2,
   "requiresCustomScript": false,
-  "supportedHosts": ["SharePointWebPart", "TeamsTab"],
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage"],
   "supportsThemeVariants": true,
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Advanced" },
-    "title": { "default": "MyWebPart" },
-    "description": { "default": "My description" },
-    "officeFabricIconFontName": "Beer",
+    "title": { "default": "Seed" },
+    "description": { "default": "Seed web part" },
+    "fullPageAppIconImageUrl": "https://www.malachis.eu/assets/img/logo/logo.png",
+    "iconImageUrl": "https://www.malachis.eu/assets/img/logo/logo.png",
     "properties": {
-      "description": "MyWebPart"
+      "description": "Showcase of the Seed project"
     }
   }]
 }

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.My = void 0;
-var My_1 = require("./My");
-Object.defineProperty(exports, "My", { enumerable: true, get: function () { return My_1.My; } });
+exports.App = void 0;
+var App_1 = require("./App");
+Object.defineProperty(exports, "App", { enumerable: true, get: function () { return App_1.App; } });
 //# sourceMappingURL=index.js.map

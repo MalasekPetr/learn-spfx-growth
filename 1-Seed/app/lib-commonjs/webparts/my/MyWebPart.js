@@ -13,7 +13,6 @@ class MyWebPart extends sp_webpart_base_1.BaseClientSideWebPart {
         const element = React.createElement(components_1.My, {
             description: this.properties.description,
             isDarkTheme: this._isDarkTheme,
-            hasTeamsContext: !!this.context.sdks.microsoftTeams,
             userDisplayName: this.context.pageContext.user.displayName,
             environmentMessage: this._environmentMessage,
         });

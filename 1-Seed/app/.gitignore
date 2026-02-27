@@ -6,6 +6,10 @@ npm-debug.log*
 # Dependency directories
 node_modules
 
+# Dependecy files
+package-lock.json
+yarn.lock
+
 # Build generated files
 dist
 lib
@@ -14,6 +18,8 @@ solution
 temp
 *.sppkg
 .heft
+jest-output
+lib-commonjs
 
 # Coverage directory used by tools like istanbul
 coverage

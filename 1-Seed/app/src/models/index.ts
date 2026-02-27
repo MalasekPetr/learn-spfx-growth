@@ -1,2 +1,2 @@
-export type { MyProps } from './MyProps';
-export type { MyWebPartProps } from './MyWebPartProps';
+export type { AppProps } from './AppProps';
+export type { BaseWebPartProps } from './BaseWebPartProps';

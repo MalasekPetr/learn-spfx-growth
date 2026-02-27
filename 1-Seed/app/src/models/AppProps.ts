@@ -1,4 +1,4 @@
-import { BaseWebPartProps } from "./BaseWebPartProps";
+import type { BaseWebPartProps } from "./BaseWebPartProps";
 
 export type AppProps = {
   webPartProps: BaseWebPartProps;

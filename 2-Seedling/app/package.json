@@ -1,7 +1,24 @@
 {
   "name": "seedling",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://www.malachis.eu/projects/learn-spfx-growth.git"
+  },
+  "keywords": [
+    "sharepoint",
+    "microsoft365",
+    "m365",
+    "office365",
+    "spfx",
+    "sharepoint framework",
+    "microsoft graph",
+    "onedrive"
+  ],
+  "displayName": "Seedling",
+  "description": "OneDrive file explorer - Microsoft Graph API and React hooks",
+  "license": "MIT",
   "engines": {
     "node": ">=22.22.0 < 23.0.0"
   },

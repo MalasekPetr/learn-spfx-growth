@@ -1,31 +1,24 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { Version } from '@microsoft/sp-core-library';
-import {
-  type IPropertyPaneConfiguration,
-  PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import { MSGraphClientV3 } from '@microsoft/sp-http';
 
-import * as strings from 'Localization';
-import { My } from '../../components';
-import type { MyProps, MyWebPartProps } from '../../models';
+import { OneDriveExplorer } from '../../components';
+import type { OneDriveExplorerProps, BaseWebPartProps } from '../../models';
 
-export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
+export default class OneDriveExplorerWebPart extends BaseClientSideWebPart<BaseWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _graphClient!: MSGraphClientV3;
 
   public render(): void {
-    const element: React.ReactElement<MyProps> = React.createElement(
-      My,
+    const element: React.ReactElement<OneDriveExplorerProps> = React.createElement(
+      OneDriveExplorer,
       {
         graphClient: this._graphClient,
         isDarkTheme: this._isDarkTheme,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams
-      }
+        webPartProps: this.properties,}
     );
     ReactDom.render(element, this.domElement);
   }
@@ -55,31 +48,5 @@ export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
 
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
-  }
-
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
-  }
-
-  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-    return {
-      pages: [
-        {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
-          groups: [
-            {
-              groupName: strings.BasicGroupName,
-              groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                })
-              ]
-            }
-          ]
-        }
-      ]
-    };
   }
 }

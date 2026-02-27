@@ -16,12 +16,12 @@ import {
   Icon
 } from '@fluentui/react';
 import * as strings from 'Localization';
-import type { MyProps, DriveItem } from '../models';
+import type { OneDriveExplorerProps, DriveItem } from '../models';
 import { useOneDrive } from '../hooks';
 import styles from '../styles/App.module.scss';
 
-export const My: React.FunctionComponent<MyProps> = (props) => {
-  const { graphClient, isDarkTheme, hasTeamsContext } = props;
+export function OneDriveExplorer(props: OneDriveExplorerProps): JSX.Element {
+  const { graphClient, isDarkTheme } = props;
   const { items, loading, error, breadcrumb, navigateToFolder, navigateToBreadcrumb, refresh } = useOneDrive(graphClient);
 
   const breadcrumbItems: IBreadcrumbItem[] = breadcrumb.map((item, index) => ({
@@ -98,7 +98,7 @@ export const My: React.FunctionComponent<MyProps> = (props) => {
   ];
 
   return (
-    <section className={`${styles.app} ${hasTeamsContext ? styles.teams : ''} ${isDarkTheme ? styles.dark : ''}`}>
+    <section className={`${styles.app} ${isDarkTheme ? styles.dark : ''}`}>
       <CommandBar items={commandBarItems} />
       <Breadcrumb items={breadcrumbItems} />
       <Stack tokens={{ childrenGap: 8 }}>
@@ -126,7 +126,7 @@ export const My: React.FunctionComponent<MyProps> = (props) => {
       </Stack>
     </section>
   );
-};
+}
 
 function formatFileSize(bytes: number): string {
   if (bytes === 0) return '0 B';

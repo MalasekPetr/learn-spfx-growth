@@ -13,8 +13,8 @@
     "group": { "default": "Advanced" },
     "title": { "default": "Seed" },
     "description": { "default": "Seed web part" },
-    "fullPageAppIconImageUrl": "https://www.malachis.eu/assets/img/logo/logo.png",
-    "iconImageUrl": "https://www.malachis.eu/assets/img/logo/logo.png",
+    "fullPageAppIconImageUrl": "https://www.malachis.eu/assets/img/spfx/learn-spfx-growth.png",
+    "iconImageUrl": "https://www.malachis.eu/assets/img/spfx/seed-icon.png",
     "properties": {
       "description": "Showcase of the Seed project"
     }

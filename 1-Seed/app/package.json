@@ -2,6 +2,21 @@
   "name": "seed",
   "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://www.malachis.eu/projects/learn-spfx-growth.git"
+  },
+  "keywords": [
+    "sharepoint",
+    "microsoft365",
+    "m365",
+    "office365",
+    "spfx",
+    "sharepoint framework"
+  ],
+  "displayName": "Seed",
+  "description": "Starter project for better structure understanding",
+  "license": "MIT",
   "engines": {
     "node": ">=22.22.0 < 23.0.0"
   },

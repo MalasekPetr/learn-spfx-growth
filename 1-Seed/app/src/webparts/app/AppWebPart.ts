@@ -5,7 +5,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'Localization';
 import { App } from '../../components';
-import { AppProps, BaseWebPartProps } from '../../models';
+import type { AppProps, BaseWebPartProps } from '../../models';
 
 export default class MyWebPart extends BaseClientSideWebPart<BaseWebPartProps> {
 

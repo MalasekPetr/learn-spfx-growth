@@ -6,10 +6,15 @@ npm-debug.log*
 # Dependency directories
 node_modules
 
+# Dependecy files
+package-lock.json
+yarn.lock
+
 # Build generated files
+jest-output
+lib-commonjs
 dist
 lib
-lib-commonjs
 release
 solution
 temp

@@ -11,6 +11,8 @@ package-lock.json
 yarn.lock
 
 # Build generated files
+jest-output
+lib-commonjs
 dist
 lib
 release
@@ -18,8 +20,6 @@ solution
 temp
 *.sppkg
 .heft
-jest-output
-lib-commonjs
 
 # Coverage directory used by tools like istanbul
 coverage

@@ -16,6 +16,15 @@
 # Coverage
 **/coverage
 
+# Jest output
+**/jest-output
+
+# CommonJS build output
+**/lib-commonjs
+
+# Package lock
+**/package-lock.json
+
 # OS
 .DS_Store
 Thumbs.db

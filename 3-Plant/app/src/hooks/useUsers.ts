@@ -10,8 +10,8 @@ type UseUsersReturn = {
   refresh: () => void;
 };
 
-type GraphResponse = {
-  value: User[];
+type GraphResponse<T> = {
+  value: T[];
   '@odata.nextLink'?: string;
 };
 
@@ -31,7 +31,7 @@ export const useUsers = (graphClient: MSGraphClientV3, searchText: string): UseU
       const collected: User[] = [];
       let nextLink: string | undefined = undefined;
 
-      const response: GraphResponse = await graphClient
+      const response: GraphResponse<User> = await graphClient
         .api('/users')
         .select(SELECT_FIELDS)
         .top(100)
@@ -41,7 +41,7 @@ export const useUsers = (graphClient: MSGraphClientV3, searchText: string): UseU
       nextLink = response['@odata.nextLink'];
 
       while (nextLink) {
-        const nextResponse: GraphResponse = await graphClient
+        const nextResponse: GraphResponse<User> = await graphClient
           .api(nextLink)
           .get();
 

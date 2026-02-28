@@ -1,3 +1,5 @@
-export type { MyProps } from './MyProps';
-export type { MyWebPartProps } from './MyWebPartProps';
-export type { Ticket } from './Ticket';
+export type { AssetDeploymentProps } from './AssetDeploymentProps';
+export type { BaseWebPartProps } from './BaseWebPartProps';
+export type { Asset } from './Asset';
+export type { Deployment } from './Deployment';
+export type { UserInfo } from './UserInfo';

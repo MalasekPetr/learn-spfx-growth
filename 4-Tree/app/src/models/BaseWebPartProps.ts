@@ -1,4 +1,5 @@
-export type MyWebPartProps = {
+export type BaseWebPartProps = {
   description: string;
-  listName: string;
-}
+  assetsListName: string;
+  deploymentsListName: string;
+};

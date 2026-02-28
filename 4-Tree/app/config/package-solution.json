@@ -22,10 +22,10 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "Malach IS - Tree: Helpdesk Tickets"
+        "default": "Malach IS - Tree: Assets Deployment"
       },
       "longDescription": {
-        "default": "Malach IS - Tree: Manage helpdesk tickets with full CRUD, caching, and a rich data grid"
+        "default": "Malach IS - Tree: Manage IT assets and their deployments with CRUD, caching, and lookup columns"
       },
       "screenshotPaths": [],
       "videoUrl": "",

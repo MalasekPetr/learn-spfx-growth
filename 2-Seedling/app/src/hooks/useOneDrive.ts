@@ -46,11 +46,13 @@ export const useOneDrive = (graphClient: MSGraphClientV3): UseOneDriveReturn => 
   }, [graphClient]);
 
   useEffect(() => {
-    void fetchItems(currentFolderId);
+    fetchItems(currentFolderId)
+    .catch((): undefined => undefined);
   }, [currentFolderId, fetchItems]);
 
   const refresh = useCallback((): void => {
-    void fetchItems(currentFolderId);
+    fetchItems(currentFolderId)
+    .catch((): undefined => undefined);
   }, [currentFolderId, fetchItems]);
 
   return { items, loading, error, breadcrumb, navigateToFolder, navigateToBreadcrumb, refresh };

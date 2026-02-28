@@ -3,21 +3,22 @@ import {
   DetailsList,
   DetailsListLayoutMode,
   SelectionMode,
-  type IColumn,
   Breadcrumb,
-  type IBreadcrumbItem,
   CommandBar,
-  type ICommandBarItemProps,
   Spinner,
   SpinnerSize,
   Stack,
   MessageBar,
   MessageBarType,
-  Icon
+  Icon,
+  type IColumn,
+  type IBreadcrumbItem,
+  type ICommandBarItemProps,
 } from '@fluentui/react';
 import * as strings from 'Localization';
 import type { OneDriveExplorerProps, DriveItem } from '../models';
 import { useOneDrive } from '../hooks';
+import { formatFileSize } from '../utils';
 import styles from '../styles/App.module.scss';
 
 export function OneDriveExplorer(props: OneDriveExplorerProps): JSX.Element {
@@ -126,12 +127,4 @@ export function OneDriveExplorer(props: OneDriveExplorerProps): JSX.Element {
       </Stack>
     </section>
   );
-}
-
-function formatFileSize(bytes: number): string {
-  if (bytes === 0) return '0 B';
-  const units: string[] = ['B', 'KB', 'MB', 'GB'];
-  const i: number = Math.floor(Math.log(bytes) / Math.log(1024));
-  const size: number = bytes / Math.pow(1024, i);
-  return `${size.toFixed(i === 0 ? 0 : 1)} ${units[i]}`;
 }

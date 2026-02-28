@@ -1,3 +1,3 @@
-export type { MyProps } from './MyProps';
-export type { MyWebPartProps } from './MyWebPartProps';
-export type { User } from './User';
+export type { BaseWebPartProps } from './BaseWebPartProps';
+export type { PhoneListProps } from './PhoneListProps';
+export type { User } from '@microsoft/microsoft-graph-types';

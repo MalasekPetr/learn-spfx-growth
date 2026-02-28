@@ -1,11 +1,10 @@
-export type Ticket = {
+export type Asset = {
   Id: number;
   Title: string;
   Description: string;
-  Status: string;
-  Priority: string;
   Category: string;
-  AssignedTo: string;
+  SerialNumber: string;
+  Status: string;
   Created?: string;
   Modified?: string;
-}
+};

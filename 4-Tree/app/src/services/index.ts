@@ -1,1 +1,2 @@
-export { createTicketService } from './ticketService';
+export { createAssetService } from './assetService';
+export { createDeploymentService } from './deploymentService';

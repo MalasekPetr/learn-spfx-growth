@@ -9,22 +9,25 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import { spfi, SPFx } from '@pnp/sp';
 import type { SPFI } from '@pnp/sp';
+import '@pnp/sp/profiles';
 
 import * as strings from 'Localization';
-import { My } from '../../components';
-import type { MyProps, MyWebPartProps } from '../../models';
+import { AssetDeployment } from '../../components';
+import type { AssetDeploymentProps, BaseWebPartProps } from '../../models';
 
-export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
+export default class AssetDeploymentWebPart extends BaseClientSideWebPart<BaseWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _sp!: SPFI;
+  private _userDepartment: string = '';
 
   public render(): void {
-    const element: React.ReactElement<MyProps> = React.createElement(
-      My,
+    const element: React.ReactElement<AssetDeploymentProps> = React.createElement(
+      AssetDeployment,
       {
+        webPartProps: this.properties,
         sp: this._sp,
-        listName: this.properties.listName,
+        userDepartment: this._userDepartment,
         isDarkTheme: this._isDarkTheme,
         hasTeamsContext: !!this.context.sdks.microsoftTeams
       }
@@ -32,9 +35,16 @@ export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
     ReactDom.render(element, this.domElement);
   }
 
-  protected onInit(): Promise<void> {
+  protected async onInit(): Promise<void> {
     this._sp = spfi().using(SPFx(this.context));
-    return Promise.resolve();
+
+    try {
+      const profile = await this._sp.profiles.myProperties();
+      const props = profile.UserProfileProperties as Array<{ Key: string; Value: string }>;
+      this._userDepartment = props.find((p) => p.Key === 'Department')?.Value || '';
+    } catch {
+      this._userDepartment = '';
+    }
   }
 
   protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
@@ -74,8 +84,11 @@ export default class MyWebPart extends BaseClientSideWebPart<MyWebPartProps> {
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
                 }),
-                PropertyPaneTextField('listName', {
-                  label: strings.ListNameFieldLabel
+                PropertyPaneTextField('assetsListName', {
+                  label: strings.AssetsListNameLabel
+                }),
+                PropertyPaneTextField('deploymentsListName', {
+                  label: strings.DeploymentsListNameLabel
                 })
               ]
             }

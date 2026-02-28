@@ -14,22 +14,16 @@ import {
   MessageBarType
 } from '@fluentui/react';
 import * as strings from 'Localization';
-import type { MyProps, User } from '../models';
+import type { PhoneListProps, User } from '../models';
 import { useUsers, useDebounce } from '../hooks';
 import styles from '../styles/App.module.scss';
 
-export const My: React.FunctionComponent<MyProps> = (props) => {
+export function PhoneList(props: PhoneListProps): JSX.Element {
   const {
-    graphClient,
-    isDarkTheme,
-    hasTeamsContext,
-    showDepartment,
-    showJobTitle,
-    showEmail,
-    showMobilePhone,
-    showBusinessPhone
+    graphClient, 
+    isDarkTheme, 
+    webPartProps: { showDepartment, showJobTitle, showEmail, showMobilePhone, showBusinessPhone }
   } = props;
-
   const [searchText, setSearchText] = React.useState<string>('');
   const debouncedSearch = useDebounce(searchText, 300);
   const { users, loading, error, refresh } = useUsers(graphClient, debouncedSearch);
@@ -116,7 +110,7 @@ export const My: React.FunctionComponent<MyProps> = (props) => {
   }, [showDepartment, showJobTitle, showEmail, showMobilePhone, showBusinessPhone]);
 
   return (
-    <section className={`${styles.app} ${hasTeamsContext ? styles.teams : ''} ${isDarkTheme ? styles.dark : ''}`}>
+    <section className={`${styles.app} ${isDarkTheme ? styles.dark : ''}`}>
       <CommandBar items={commandBarItems} />
       <div className={styles.searchBox}>
         <SearchBox
@@ -149,4 +143,4 @@ export const My: React.FunctionComponent<MyProps> = (props) => {
       </Stack>
     </section>
   );
-};
+}

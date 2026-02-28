@@ -1,1 +1,1 @@
-export { My } from './My';
+export { PhoneList } from './PhoneList';

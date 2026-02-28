@@ -8,15 +8,35 @@ Connect-PnPOnline `
     -Url $SiteUrl `
     -Interactive
 
-# Create the Helpdesk Tickets list
-New-PnPList -Title "Helpdesk Tickets" -Template GenericList
+# --- Assets list (master catalog) ---
+New-PnPList -Title "Assets" -Template GenericList
 
-# Add custom columns
-Add-PnPField -List "Helpdesk Tickets" -DisplayName "Description" -InternalName "Description" -Type Note -AddToDefaultView
-Add-PnPField -List "Helpdesk Tickets" -DisplayName "Status" -InternalName "Status" -Type Choice -Choices "New","In Progress","Resolved","Closed" -DefaultValue "New" -AddToDefaultView
-Add-PnPField -List "Helpdesk Tickets" -DisplayName "Priority" -InternalName "Priority" -Type Choice -Choices "Low","Medium","High","Critical" -DefaultValue "Medium" -AddToDefaultView
-Add-PnPField -List "Helpdesk Tickets" -DisplayName "Category" -InternalName "Category" -Type Choice -Choices "Hardware","Software","Network","Other" -DefaultValue "Other" -AddToDefaultView
-Add-PnPField -List "Helpdesk Tickets" -DisplayName "AssignedTo" -InternalName "AssignedTo" -Type Text -AddToDefaultView
+Add-PnPField -List "Assets" -DisplayName "Description" -InternalName "Description" -Type Note -AddToDefaultView
+Add-PnPField -List "Assets" -DisplayName "Category" -InternalName "Category" -Type Choice `
+    -Choices "Laptop","Monitor","Phone","Printer","Accessory","Other" `
+    -DefaultValue "Other" -AddToDefaultView
+Add-PnPField -List "Assets" -DisplayName "SerialNumber" -InternalName "SerialNumber" -Type Text -AddToDefaultView
+Add-PnPField -List "Assets" -DisplayName "Status" -InternalName "Status" -Type Choice `
+    -Choices "Available","Deployed","Maintenance","Retired" `
+    -DefaultValue "Available" -AddToDefaultView
+
+# --- Deployments list (assignments) ---
+New-PnPList -Title "Deployments" -Template GenericList
+
+Add-PnPField -List "Deployments" -DisplayName "DeployedTo" -InternalName "DeployedTo" -Type Text -AddToDefaultView
+Add-PnPField -List "Deployments" -DisplayName "Department" -InternalName "Department" -Type Text -AddToDefaultView
+Add-PnPField -List "Deployments" -DisplayName "DeployedDate" -InternalName "DeployedDate" -Type DateTime -AddToDefaultView
+Add-PnPField -List "Deployments" -DisplayName "ReturnDate" -InternalName "ReturnDate" -Type DateTime -AddToDefaultView
+Add-PnPField -List "Deployments" -DisplayName "Notes" -InternalName "Notes" -Type Note -AddToDefaultView
+
+# Lookup column: Asset -> Assets list
+$assetsList = Get-PnPList -Identity "Assets"
+Add-PnPField -List "Deployments" -DisplayName "Asset" -InternalName "Asset" `
+    -Type Lookup -AddToDefaultView `
+    -AdditionalAttributes @{
+        List = $assetsList.Id.ToString()
+        ShowField = "Title"
+    }
 
 # Disconnect
 Disconnect-PnPOnline

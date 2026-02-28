@@ -1,22 +1,23 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "ca4c411d-df25-499a-8e09-89583f6332d7",
-  "alias": "MyWebPart",
+  "alias": "AssetDeploymentWebPart",
   "componentType": "WebPart",
   "version": "*",
   "manifestVersion": 2,
   "requiresCustomScript": false,
-  "supportedHosts": ["SharePointWebPart", "TeamsTab"],
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage", "TeamsTab"],
   "supportsThemeVariants": true,
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Advanced" },
-    "title": { "default": "Helpdesk Tickets" },
-    "description": { "default": "Manage helpdesk tickets with CRUD operations" },
-    "officeFabricIconFontName": "Ticket",
+    "title": { "default": "Assets Deployment" },
+    "description": { "default": "Manage IT assets and their deployments" },
+    "officeFabricIconFontName": "ServerProcesses",
     "properties": {
-      "description": "Helpdesk Tickets",
-      "listName": "Helpdesk Tickets"
+      "description": "Assets Deployment",
+      "assetsListName": "Assets",
+      "deploymentsListName": "Deployments"
     }
   }]
 }

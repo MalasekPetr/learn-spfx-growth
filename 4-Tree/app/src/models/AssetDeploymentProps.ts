@@ -1,8 +1,10 @@
 import type { SPFI } from '@pnp/sp';
+import type { BaseWebPartProps } from './BaseWebPartProps';
 
-export type MyProps = {
+export type AssetDeploymentProps = {
+  webPartProps: BaseWebPartProps;
   sp: SPFI;
-  listName: string;
+  userDepartment: string;
   isDarkTheme: boolean;
   hasTeamsContext: boolean;
-}
+};

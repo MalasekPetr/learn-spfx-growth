@@ -19,6 +19,11 @@ declare interface ILocalization {
   ShowEmail: string;
   ShowMobilePhone: string;
   ShowBusinessPhone: string;
+  FiltersGroupName: string;
+  AllowFirstLetterFilter: string;
+  AllowDepartmentFilter: string;
+  AllDepartments: string;
+  ClearFilters: string;
 }
 
 declare module 'Localization' {

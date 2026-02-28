@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "**/lib-commonjs": true,
+    "**/jest-output": true
+  }
+}

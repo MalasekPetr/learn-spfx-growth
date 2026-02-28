@@ -97,6 +97,17 @@ export default class PhoneListWebPart extends BaseClientSideWebPart<BaseWebPartP
                   label: strings.ShowBusinessPhone
                 })
               ]
+            },
+            {
+              groupName: strings.FiltersGroupName,
+              groupFields: [
+                PropertyPaneToggle('allowFirstLetterFilter', {
+                  label: strings.AllowFirstLetterFilter
+                }),
+                PropertyPaneToggle('allowDepartmentFilter', {
+                  label: strings.AllowDepartmentFilter
+                })
+              ]
             }
           ]
         }

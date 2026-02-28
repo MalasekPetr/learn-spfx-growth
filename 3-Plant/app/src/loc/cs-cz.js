@@ -19,6 +19,11 @@ define([], function() {
     "ShowJobTitle": "Zobrazit pozici",
     "ShowEmail": "Zobrazit e-mail",
     "ShowMobilePhone": "Zobrazit mobilní telefon",
-    "ShowBusinessPhone": "Zobrazit pracovní telefon"
+    "ShowBusinessPhone": "Zobrazit pracovní telefon",
+    "FiltersGroupName": "Filtry",
+    "AllowFirstLetterFilter": "Povolit abecední filtr",
+    "AllowDepartmentFilter": "Povolit filtr oddělení",
+    "AllDepartments": "Všechna oddělení",
+    "ClearFilters": "Vymazat filtry"
   }
 });

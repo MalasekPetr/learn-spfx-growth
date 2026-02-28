@@ -1,55 +1,85 @@
 # 2-Seedling
 
-Step 2 of the SPFx Learning Ladder -- **My Files Explorer**.
+Step 2 of the SPFx Learning Ladder -- **OneDrive Explorer**.
 
-A web part that lets users browse their OneDrive files and folders using Microsoft Graph API.
+A web part that lets users browse their OneDrive files and folders using Microsoft Graph API, custom React hooks, and Fluent UI components.
 
 ## What's New (compared to 1-Seed)
 
-| Concept | What you'll learn |
-| ------- | ----------------- |
-| **Graph API** | Initialize `MSGraphClientV3` in the web part, call `/me/drive/root/children` and `/me/drive/items/{id}/children` |
-| **OneDrive** | Browse folders, navigate into subfolders, open files in a new tab |
-| **React Hooks** | `useState`, `useEffect`, `useCallback`, and custom hooks (`useOneDrive`, `useBreadcrumb`) |
-| **Fluent UI** | `DetailsList`, `Breadcrumb`, `CommandBar`, `Spinner`, `Stack`, `MessageBar`, `Icon` |
-| **Utils** | Extracted utility functions in `src/utils/` with barrel export |
-
-### New Folders
-
-- `src/hooks/` -- custom React hooks for data fetching and navigation state
-- `src/utils/` -- reusable utility functions (`formatFileSize`)
+| Concept | Seed | Seedling (new) |
+| ------- | ---- | -------------- |
+| Data source | None (static props) | Microsoft Graph API (`MSGraphClientV3`) |
+| Context handover | WebPart pushes data as props | WebPart passes capability (Graph client), hooks pull data |
+| React patterns | Stateless component | Hook composition (`useOneDrive` + `useBreadcrumb`) |
+| UI components | Plain HTML | Fluent UI DetailsList, Breadcrumb, CommandBar, Spinner |
+| Models | 2 types (props only) | 5 types (props + API response + navigation models) |
+| New folders | -- | `src/hooks/`, `src/utils/` |
+| Permissions | None | `Files.Read` (Graph API) |
 
 ## Key Files to Study
 
-- `src/hooks/useOneDrive.ts` -- custom hook encapsulating all Graph calls and navigation state
-- `src/hooks/useBreadcrumb.ts` -- breadcrumb navigation state management
-- `src/components/OneDriveExplorer.tsx` -- React component composing Fluent UI components
-- `src/webparts/oneDriveExplorer/OneDriveExplorerWebPart.ts` -- Graph client initialization in `onInit()`
-- `src/models/DriveItem.ts` -- type definition matching Graph API response shape
-- `src/utils/formatUtils.ts` -- file size formatting utility
+| File | Purpose |
+| ---- | ------- |
+| `src/hooks/useOneDrive.ts` | Custom hook composing `useBreadcrumb` + Graph API calls |
+| `src/hooks/useBreadcrumb.ts` | Generic breadcrumb navigation state |
+| `src/components/OneDriveExplorer.tsx` | React component with Fluent UI layout |
+| `src/webparts/oneDriveExplorer/OneDriveExplorerWebPart.ts` | Graph client initialization in `onInit()` |
+| `src/models/DriveItem.ts` | Type definition matching Graph API response shape |
+| `src/utils/formatUtils.ts` | File size formatting utility |
+
+See [app/README.md](app/README.md) for detailed architecture explanations and code walkthroughs.
 
 ## Getting Started
+
+### Prerequisites
+
+- Complete the [1-Seed](../1-Seed/) stage first
+- Node.js **22.x** (required by SPFx 1.22.2)
+- A Microsoft 365 developer tenant or SharePoint Online site
+- A tenant admin to approve the `Files.Read` Graph API permission
+
+### Install
 
 ```bash
 cd 2-Seedling/app
 npm install
+```
+
+### Local Development
+
+```bash
 npm start
 ```
 
-## Graph API Permissions
+This starts the local dev server at `https://localhost:4321`. Open your SharePoint workbench:
 
-After deploying the `.sppkg` package, a SharePoint admin must approve the `Files.Read` permission:
+```text
+https://<tenant>.sharepoint.com/_layouts/15/workbench.aspx
+```
 
-1. Go to **SharePoint Admin Center** > **API access**
-2. Approve the pending `Files.Read` request for Microsoft Graph
+### Build & Package
 
-Without this approval, the web part will show a permission error.
+```bash
+npm run build
+```
 
-## Prerequisites
+This compiles TypeScript, bundles the web part, and produces `sharepoint/solution/seedling.sppkg`.
 
-- Complete the [1-Seed](../1-Seed/) stage first
-- A Microsoft 365 tenant with OneDrive enabled
+### Deploy
+
+1. Upload `seedling.sppkg` to your **SharePoint App Catalog** (tenant or site-level)
+2. Trust the solution when prompted
+3. A tenant admin must approve the `Files.Read` permission in **SharePoint admin center > API access**
+4. Add the web part to any SharePoint page
+
+### Test
+
+- Add the web part to a SharePoint page (workbench won't work without Graph permissions)
+- Verify your OneDrive root folder contents appear
+- Click a folder to navigate into it
+- Verify the breadcrumb updates and allows navigating back
+- Click the Refresh button in the CommandBar
 
 ## Next Step
 
-Continue to [3-Plant](../3-Plant/) to add Graph pagination, debounced search, and property pane configuration.
+Continue to [3-Plant](../3-Plant/) to add Graph pagination, service layer, Dexie caching, and rich filtering.

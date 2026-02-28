@@ -5,5 +5,6 @@ export type BaseWebPartProps = {
   showEmail: boolean;
   showMobilePhone: boolean;
   showBusinessPhone: boolean;
-
-}
+  allowFirstLetterFilter: boolean;
+  allowDepartmentFilter: boolean;
+};

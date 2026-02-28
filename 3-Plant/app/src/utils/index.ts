@@ -1,1 +1,1 @@
-export { normalizeText } from './textUtils';
+export { normalizeText, getFirstLetter, generateCzechAlphabet } from './textUtils';

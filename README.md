@@ -1,6 +1,6 @@
 # SPFx Learning Ladder
 
-A 4-step progressive learning path for SharePoint Framework (SPFx) developers. Each stage builds on the previous one, introducing new concepts while maintaining a consistent, durable project structure.
+A progressive 4-step learning path for SharePoint Framework (SPFx) developers. Each stage builds on the previous one, introducing new concepts while maintaining a consistent project structure.
 
 ![SPFx Learning Ladder](growth.png)
 
@@ -8,25 +8,36 @@ A 4-step progressive learning path for SharePoint Framework (SPFx) developers. E
 
 | Stage | Folder | Web Part | Key Concepts |
 | ----- | ------ | -------- | ------------ |
-| 1 | [1-Seed](1-Seed/) | Hello World | Project structure, barrel exports, React component basics, localization, theming |
-| 2 | [2-Seedling](2-Seedling/) | My Files Explorer | Graph API, OneDrive browsing, custom React hooks, Fluent UI components |
-| 3 | [3-Plant](3-Plant/) | Phone List | Graph pagination, debounced search, diacritics normalization, property pane toggles |
-| 4 | [4-Tree](4-Tree/) | Assets Deployment | PnP/JS CRUD, lookup columns, OData filtering, IndexedDB caching (Dexie), service/cache layers |
+| 1 | [1-Seed](1-Seed/) | Hello World | Project structure, barrel exports, React basics, localization, theming |
+| 2 | [2-Seedling](2-Seedling/) | OneDrive Explorer | Graph API, custom React hooks, Fluent UI components |
+| 3 | [3-Plant](3-Plant/) | Phone List | Graph pagination, service layer, Dexie caching, alphabet filter, department filter |
+| 4 | [4-Tree](4-Tree/) | Assets Deployment | PnP/JS CRUD, lookup columns, OData filtering, multi-table caching |
 
-## How to Use
+## How to Learn
 
-1. Start with **1-Seed** -- understand the project structure and design patterns
-2. Move to **2-Seedling** -- compare it with 1-Seed to see what changed and why
-3. Continue through **3-Plant** and **4-Tree**, each time diffing against the previous stage
+The recommended approach is **diff-based comparison**. After studying a stage, compare it with the previous one to see exactly what changed and why:
 
-## Getting Started
+1. **1-Seed** -- Study the project structure and foundational patterns
+2. **2-Seedling** -- Compare with Seed to see how Graph API and hooks are added
+3. **3-Plant** -- Compare with Seedling to see how services, caching, and filtering are introduced
+4. **4-Tree** -- Compare with Plant to see how CRUD, PnP/JS, and lookup columns work
 
-Each stage is a standalone SPFx project. To run any stage:
+Each stage has two READMEs:
 
-```bash
-cd <Stage>/app
-npm install
-npm start
+- **Stage README** (e.g. `1-Seed/README.md`) -- practical guide: prerequisites, build, deploy, test
+- **App README** (e.g. `1-Seed/app/README.md`) -- deep educational content: architecture, code walkthroughs, key concepts
+
+## Concepts Progression
+
+```text
+Seed          Seedling         Plant              Tree
+────          ────────         ─────              ────
+Structure     + Graph API      + Pagination        + PnP/JS (SP lists)
+Components    + React Hooks    + Service layer     + CRUD operations
+Models        + Utils          + Cache layer       + Lookup columns
+Styles        + Fluent UI      + Dexie.js          + OData server-side filter
+Localization                   + Alphabet filter   + Multi-table cache
+                               + Dept. dropdown    + Pivot, Panels, Dialogs
 ```
 
 ## Folder Convention
@@ -42,14 +53,26 @@ src/
   loc/          -- Localization strings
   hooks/        -- Custom React hooks        (from 2-Seedling)
   utils/        -- Utility functions          (from 2-Seedling)
-  services/     -- API service layer          (from 4-Tree)
-  cache/        -- IndexedDB cache            (from 4-Tree)
+  services/     -- API service layer          (from 3-Plant)
+  cache/        -- IndexedDB cache            (from 3-Plant)
 ```
+
+## Quick Start
+
+Each stage is a standalone SPFx project:
+
+```bash
+cd <Stage>/app
+npm install
+npm start
+```
+
+See each stage's README for detailed setup, build, deploy, and testing instructions.
 
 ## Tech Stack
 
 - SharePoint Framework 1.22.2
-- React 17
-- TypeScript 5.8
+- React 17 + TypeScript 5.8
 - Fluent UI React 8
 - Heft build system
+- Node.js 22.x

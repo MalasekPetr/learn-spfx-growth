@@ -2,6 +2,8 @@
 
 A minimal SharePoint Framework (SPFx) v1.22.2 web part built with **React** and **TypeScript**. This project serves as an educational reference for understanding SPFx project structure, conventions, and best practices.
 
+> **Learning path:** This is step **1** in the series. It establishes the foundational patterns -- project structure, barrel exports, typed props, theming, and localization -- that are reused and extended in every subsequent stage.
+
 ## Technology Stack
 
 | Technology | Version | Purpose |

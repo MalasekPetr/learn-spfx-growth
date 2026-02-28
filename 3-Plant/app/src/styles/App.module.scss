@@ -19,3 +19,55 @@
 .searchBox {
   margin-bottom: 8px;
 }
+
+.letterBar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.letterButton,
+.letterButtonActive,
+.letterButtonDisabled {
+  min-width: 28px;
+  height: 28px;
+  border: 1px solid $ms-color-neutralTertiaryAlt;
+  border-radius: 4px;
+  margin: 2px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  padding: 0;
+}
+
+.letterButton {
+  &:hover {
+    background: $ms-color-neutralLighter;
+  }
+}
+
+.letterButtonActive {
+  background-color: $ms-color-themePrimary;
+  color: $ms-color-white;
+  border-color: $ms-color-themePrimary;
+
+  &:hover {
+    background-color: $ms-color-themeDarkAlt;
+  }
+}
+
+.letterButtonDisabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.filterBar {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}

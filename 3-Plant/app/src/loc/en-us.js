@@ -19,6 +19,11 @@ define([], function() {
     "ShowJobTitle": "Show Job Title",
     "ShowEmail": "Show Email",
     "ShowMobilePhone": "Show Mobile Phone",
-    "ShowBusinessPhone": "Show Business Phone"
+    "ShowBusinessPhone": "Show Business Phone",
+    "FiltersGroupName": "Filters",
+    "AllowFirstLetterFilter": "Enable alphabet filter",
+    "AllowDepartmentFilter": "Enable department filter",
+    "AllDepartments": "All departments",
+    "ClearFilters": "Clear filters"
   }
 });

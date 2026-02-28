@@ -20,7 +20,9 @@
       "showJobTitle": true,
       "showEmail": true,
       "showMobilePhone": true,
-      "showBusinessPhone": true
+      "showBusinessPhone": true,
+      "allowFirstLetterFilter": true,
+      "allowDepartmentFilter": true
     }
   }]
 }

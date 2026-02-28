@@ -2,7 +2,7 @@
 
 A SharePoint Framework (SPFx) v1.22.2 web part that manages IT assets and their deployment assignments. Built with **React**, **TypeScript**, **PnP/JS v4**, and **Dexie.js** for IndexedDB caching.
 
-> **Learning path:** This is step **4** in the series. It builds on [3-Plant](../../3-Plant/app/README.md) by introducing SharePoint list CRUD operations, lookup columns, server-side OData filtering, a service/cache architecture, and multi-tab UI with Fluent UI Pivot.
+> **Learning path:** This is step **4** in the series. It builds on [3-Plant](../../3-Plant/app/README.md) by switching from Microsoft Graph to SharePoint lists via PnP/JS, adding full CRUD operations, lookup columns, server-side OData filtering, and multi-tab UI with Fluent UI Pivot.
 
 ## What's New Since Plant
 
@@ -12,15 +12,15 @@ A SharePoint Framework (SPFx) v1.22.2 web part that manages IT assets and their 
 | Typing | Official `@microsoft/microsoft-graph-types` | Custom types against SharePoint list columns |
 | Operations | Read-only | Full CRUD (Create, Read, Update, Delete) |
 | Lists | N/A (Graph endpoint) | Two lists linked by lookup column |
-| Caching | None | Dexie.js (IndexedDB) with cache-first-then-refresh |
-| Architecture | Hook calls API directly | Service layer + Cache layer + Hook |
+| Caching | Dexie.js single table (read-only) | Dexie.js multi-table (read + write-through) |
+| Architecture | Service + Cache + Hook | Same pattern, extended with CRUD |
 | Components | Single component | Pivot tabs, list views, form panels, badges |
 | Security | All users see all data | Department-based server-side OData filtering |
 | User context | None | User Profile Service for department detection |
 | Context handover | WebPart passes Graph client | WebPart passes PnP/JS `SPFI` instance + user department |
 | Property pane | Toggle fields for column visibility | TextField for list names |
-| New folders | -- | `src/services/`, `src/cache/` |
-| New dependencies | `@microsoft/microsoft-graph-types` | `@pnp/sp`, `@pnp/core`, `dexie` |
+| New folders | `src/services/`, `src/cache/` | -- (same folders, extended) |
+| New dependencies | `@microsoft/microsoft-graph-types`, `dexie` | `@pnp/sp`, `@pnp/core` |
 
 ## Technology Stack
 

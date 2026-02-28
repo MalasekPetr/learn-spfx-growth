@@ -10,7 +10,7 @@
     "environment": "spo",
     "packageManager": "npm",
     "solutionName": "Seed",
-    "solutionShortDescription": "Seed description",
+    "solutionShortDescription": "Seed - Starter project for better structure understanding",
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "componentType": "webpart"

@@ -11,12 +11,12 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Advanced" },
-    "title": { "default": "Seed" },
-    "description": { "default": "Seed web part" },
+    "title": { "default": "Seed web part" },
+    "description": { "default": "Seed web part - Starter project for better structure understanding" },
     "fullPageAppIconImageUrl": "https://www.malachis.eu/assets/img/spfx/learn-spfx-growth.png",
     "iconImageUrl": "https://www.malachis.eu/assets/img/spfx/seed-icon.png",
     "properties": {
-      "description": "Showcase of the Seed project"
+      "description": "Seed web part"
     }
   }]
 }

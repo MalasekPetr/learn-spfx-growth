@@ -25,11 +25,6 @@
     "@pnp/queryable": "^4.9.0",
     "@pnp/logging": "^4.9.0",
     "dexie": "^4.0.11",
-    "@progress/kendo-react-grid": "^9.5.0",
-    "@progress/kendo-data-query": "^1.7.0",
-    "@progress/kendo-react-intl": "^9.5.0",
-    "@progress/kendo-react-data-tools": "^9.5.0",
-    "@progress/kendo-theme-default": "^9.5.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "tslib": "2.3.1"

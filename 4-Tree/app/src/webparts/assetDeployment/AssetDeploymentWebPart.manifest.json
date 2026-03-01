@@ -14,6 +14,7 @@
     "title": { "default": "Assets Deployment" },
     "description": { "default": "Manage IT assets and their deployments" },
     "officeFabricIconFontName": "ServerProcesses",
+    "fullPageAppIconImageUrl": "https://www.malachis.eu/assets/img/spfx/learn-spfx-growth.png",
     "properties": {
       "description": "Assets Deployment",
       "assetsListName": "Assets",

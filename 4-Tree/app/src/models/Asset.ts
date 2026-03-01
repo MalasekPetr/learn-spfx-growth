@@ -1,10 +1,8 @@
-export type Asset = {
-  Id: number;
-  Title: string;
+import type { BaseListItem } from './BaseListItem';
+
+export type Asset = BaseListItem & {
   Description: string;
   Category: string;
   SerialNumber: string;
   Status: string;
-  Created?: string;
-  Modified?: string;
 };

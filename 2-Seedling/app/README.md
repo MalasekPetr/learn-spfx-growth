@@ -479,3 +479,7 @@ Ideas for the next step in the learning path:
 ## License
 
 MIT
+
+---
+
+[<< Seed App](../../1-Seed/app/README.md) | [Home](../../README.md) | [Stage Guide](../README.md) | [Next: Plant App >>](../../3-Plant/app/README.md)

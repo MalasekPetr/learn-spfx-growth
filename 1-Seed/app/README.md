@@ -241,3 +241,7 @@ To use this as a starting point for a real web part:
 ## License
 
 MIT
+
+---
+
+[Home](../../README.md) | [Stage Guide](../README.md) | [Next: Seedling App >>](../../2-Seedling/app/README.md)

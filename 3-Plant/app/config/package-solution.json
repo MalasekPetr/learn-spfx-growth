@@ -4,9 +4,9 @@
     "name": "plant-client-side-solution",
     "title": "Plant",
     "id": "385e5978-8ce7-4f9a-a4d3-01aee1bb1731",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
-    "skipFeatureDeployment": true,
+    "skipFeatureDeployment": false,
     "isDomainIsolated": false,
     "iconPath": "assets/malachis.png",
     "supportedLocales": [
@@ -27,16 +27,18 @@
       "longDescription": {
         "default": "Malach IS - Plant: Browse your organization's user directory with search and configurable columns"
       },
-      "screenshotPaths": [],
+      "screenshotPaths": [
+        "assets/growth.png"
+      ],
       "videoUrl": "",
-      "categories": ["Productivity", "Collaboration"]
+      "categories": ["Productivity"]
     },
     "features": [
       {
         "title": "Plant Feature",
         "description": "The feature that activates elements of the Plant solution.",
         "id": "f790cef1-6b64-46fb-8423-8b39ebede92f",
-        "version": "1.0.0.0"
+        "version": "1.0.1.0"
       }
     ],
     "webApiPermissionRequests": [

@@ -484,3 +484,7 @@ npm run eject-webpack
 ## License
 
 MIT
+
+---
+
+[<< Seedling App](../../2-Seedling/app/README.md) | [Home](../../README.md) | [Stage Guide](../README.md) | [Next: Tree App >>](../../4-Tree/app/README.md)

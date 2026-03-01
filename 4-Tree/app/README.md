@@ -513,3 +513,7 @@ npm run eject-webpack
 ## License
 
 MIT
+
+---
+
+[<< Plant App](../../3-Plant/app/README.md) | [Home](../../README.md) | [Stage Guide](../README.md)

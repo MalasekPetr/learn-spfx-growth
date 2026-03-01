@@ -4,9 +4,9 @@
     "name": "seed-client-side-solution",
     "title": "Seed",
     "id": "5f75395d-5839-439d-b589-62a2ba65e679",
-    "version": "1.0.0.0",
+    "version": "1.0.1.0",
     "includeClientSideAssets": true,
-    "skipFeatureDeployment": true,
+    "skipFeatureDeployment": false,
     "isDomainIsolated": false,
     "iconPath": "assets/malachis.png",
     "supportedLocales": [
@@ -27,16 +27,20 @@
       "longDescription": {
         "default": "Malach IS - Seed project description"
       },
-      "screenshotPaths": [],
+      "screenshotPaths": [
+        "assets/growth.png"
+      ],
       "videoUrl": "",
-      "categories": ["Productivity"]
+      "categories": [
+        "Productivity"
+      ]
     },
     "features": [
       {
         "title": "Seed Feature",
         "description": "The feature that activates elements of the Seed solution.",
         "id": "8b093459-b349-4ab7-96c2-bdef41e6ec0a",
-        "version": "1.0.0.0"
+        "version": "1.0.1.0"
       }
     ]
   },

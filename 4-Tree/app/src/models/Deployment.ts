@@ -1,6 +1,6 @@
-export type Deployment = {
-  Id: number;
-  Title: string;
+import type { BaseListItem } from './BaseListItem';
+
+export type Deployment = BaseListItem & {
   AssetId: number;
   AssetTitle?: string;
   DeployedTo: string;
@@ -8,6 +8,4 @@ export type Deployment = {
   DeployedDate: string;
   ReturnDate: string | null;
   Notes: string;
-  Created?: string;
-  Modified?: string;
 };
